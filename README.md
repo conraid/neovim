@@ -1,2 +1,2 @@
 # vim
-Configuragione for Vim and Neovim
+Configuration for Vim and Neovim
