@@ -1,3 +1,7 @@
+if filereadable(glob("~/.vim/pluginrc"))
+	source ~/.vim/pluginrc
+endif
+
 " Load pathogen paths
 execute pathogen#infect()
 call pathogen#helptags()
@@ -83,6 +87,9 @@ set paste
 
 " set terminal 256 color. For blu and bold font
 "set t_Co=256
+
+" map f3 to toogle search highlightning
+nnoremap <F3> :set hlsearch!<CR>
 
 function! PhpSyntaxOverride()
   hi! def link phpDocTags  phpDefine

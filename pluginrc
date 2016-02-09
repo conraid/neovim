@@ -1,3 +1,4 @@
+" Set NerdTree
 " Visualizzo NERDTree con i tasti 'CTRL-N'  
 map <C-n> :NERDTreeToggle<CR>
 " Ignoro i file di backup di Vim  
@@ -11,10 +12,29 @@ let g:NERDTreeWinSize=35
 "map <leader>nb :NERDTreeFromBookmark 
 "map <leader>nf :NERDTreeFind<cr>
 
-" Set Syntastic
-let g:syntastic_mode_map={'mode':'active', 'active_filetypes':[], 'passive_filetypes':['html']}
-let g:syntastic_phpcs_disable=1
-
 " Set Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'luna'
+
+" Set Syntastic
+let g:syntastic_mode_map={'mode':'active', 'active_filetypes':[], 'passive_filetypes':['']}
+let g:syntastic_phpcs_disable=0
+let g:syntastic_php_phpcs_args='--standard=WordPress'
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+noremap <f4> :SyntasticCheck<CR>
+noremap <f5> :SyntasticReset<CR>
+
+" Set phpqa
+" Pass arguments to phpcs binary
+let g:phpqa_codesniffer_args = "--standard=Wordpress"
+" PHP codesniffer binary (default = phpcs)
+let g:phpqa_codesniffer_cmd='/usr/bin/phpcs'
+" Run messdetector on save (default = 1)
+let g:phpqa_messdetector_autorun = 0
+" Run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+" Show code coverage on load (default = 0)
+let g:phpqa_codecoverage_autorun = 0
