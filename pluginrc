@@ -27,10 +27,6 @@ let g:syntastic_check_on_wq = 0
 noremap <f4> :SyntasticCheck<CR>
 noremap <f5> :SyntasticReset<CR>
 
-" HTML Validator.nu
-au FileType html compiler html
-au QuickFixCmdPost make cwindow
-
 " Set phpqa
 " Pass arguments to phpcs binary
 let g:phpqa_codesniffer_args = "--standard=Wordpress"
