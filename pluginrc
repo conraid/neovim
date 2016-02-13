@@ -42,3 +42,7 @@ let g:phpqa_codecoverage_autorun = 0
 let g:phpqa_messdetector_ruleset = "cleancode,codesize,naming,design,unusedcode"
 " Stop the location list opening automatically
 let g:phpqa_open_loc = 0
+
+" Set EMMET
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
