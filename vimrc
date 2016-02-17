@@ -20,9 +20,6 @@ else
 "    "let g:colors_name="desert"
 endif
 
-" preserve paste
-set paste
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -82,14 +79,23 @@ set tabstop=4
 " Set filetype indent 
 filetype plugin indent on
 
-" set paste autoindent
-set paste
+" set paste autoindent 
+if has('nvim')
+    set nopaste  
+else
+    set paste
+endif
+" set F2 toogle paste
+set pastetoggle=<F7>
 
 " set terminal 256 color. For blu and bold font
 "set t_Co=256
 
 " map f3 to toogle search highlightning
 nnoremap <F3> :set hlsearch!<CR>
+
+" Remove annoying underline in listing
+set nocursorline
 
 function! PhpSyntaxOverride()
   hi! def link phpDocTags  phpDefine
@@ -100,3 +106,4 @@ augroup phpSyntaxOverride
   autocmd!
   autocmd FileType php call PhpSyntaxOverride()
 augroup END
+
