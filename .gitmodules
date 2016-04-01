@@ -58,3 +58,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vim-autoprefixer"]
+	path = bundle/vim-autoprefixer
+	url = https://github.com/Ioannis-Kapoulas/vim-autoprefixer.git
