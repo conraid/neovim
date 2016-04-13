@@ -1,5 +1,5 @@
-if filereadable(glob("~/.vim/pluginrc"))
-	source ~/.vim/pluginrc
+if filereadable(glob("~/.vim/plugin.vim"))
+	source ~/.vim/plugin.vim
 endif
 
 " Load pathogen paths
