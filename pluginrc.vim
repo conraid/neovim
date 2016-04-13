@@ -45,4 +45,5 @@ let g:phpqa_open_loc = 0
 
 " Set EMMET
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,php EmmetInstall
+let g:user_emmet_leader_key='<C-X>'
