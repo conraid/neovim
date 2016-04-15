@@ -1,5 +1,5 @@
-if filereadable(glob("~/.vim/plugin.vim"))
-	source ~/.vim/plugin.vim
+if filereadable(glob("~/.vim/pluginrc.vim"))
+	source ~/.vim/pluginrc.vim
 endif
 
 " Load pathogen paths
@@ -86,7 +86,7 @@ else
     set paste
 endif
 " set F2 toogle paste
-set pastetoggle=<F7>
+set pastetoggle=<F2>
 
 " set terminal 256 color. For blu and bold font
 "set t_Co=256
@@ -107,3 +107,9 @@ augroup phpSyntaxOverride
   autocmd FileType php call PhpSyntaxOverride()
 augroup END
 
+" MUTT
+au BufRead /tmp/mutt-* set tw=72
+
+" Set <F4> to SPELL check
+map <F4> :setlocal spell! spelllang=it<CR>
+highlight SpellBad ctermbg=darkred ctermfg=white term=underline cterm=underline
