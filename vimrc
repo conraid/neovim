@@ -113,3 +113,8 @@ au BufRead /tmp/mutt-* set tw=72
 " Set <F4> to SPELL check
 map <F4> :setlocal spell! spelllang=it<CR>
 highlight SpellBad ctermbg=darkred ctermfg=white term=underline cterm=underline
+
+autocmd BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal g`\"" |
+            \ endif
