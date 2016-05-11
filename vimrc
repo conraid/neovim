@@ -114,7 +114,9 @@ au BufRead /tmp/mutt-* set tw=72
 map <F4> :setlocal spell! spelllang=it<CR>
 highlight SpellBad ctermbg=darkred ctermfg=white term=underline cterm=underline
 
-autocmd BufReadPost *
+if has("autocmd")
+    autocmd BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
             \   exe "normal g`\"" |
             \ endif
+endif
