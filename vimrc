@@ -120,3 +120,8 @@ if has("autocmd")
             \   exe "normal g`\"" |
             \ endif
 endif
+
+" Set cursorline (leave last)
+highlight CursorLine cterm=NONE ctermbg=233
+highlight CursorLineNR ctermbg=233 ctermfg=255 
+set cursorline
