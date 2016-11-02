@@ -53,3 +53,11 @@ let g:phpqa_open_loc = 0
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 let g:user_emmet_leader_key='<C-X>'
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+
+
+
+
+

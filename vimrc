@@ -78,6 +78,7 @@ set softtabstop=4
 set tabstop=4
 " Set filetype indent 
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " set paste autoindent 
 if has('nvim')
@@ -125,3 +126,7 @@ endif
 highlight CursorLine cterm=NONE ctermbg=233
 highlight CursorLineNR ctermbg=233 ctermfg=255 
 set cursorline
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
