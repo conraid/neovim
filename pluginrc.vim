@@ -58,6 +58,6 @@ let g:user_emmet_leader_key='<C-X>'
 let g:SuperTabDefaultCompletionType = "context"
 
 
-
-
-
+" NerdCommenter
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'php': { 'left': '/** ','right': ' */' } }
