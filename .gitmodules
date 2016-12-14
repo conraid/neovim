@@ -67,6 +67,3 @@
 [submodule "bundle/indentLine"]
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule "bundle/vim-autoprefixe"]
-	path = bundle/vim-autoprefixe
-	url = https://github.com/Ioannis-Kapoulas/vim-autoprefixer.git
