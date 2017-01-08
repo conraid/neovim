@@ -47,6 +47,10 @@ set autoindent
 syntax enable
 set syntax=on
 
+" Show space end of line
+highlight ExtraWhitespace ctermbg=grey
+match ExtraWhitespace /\S\zs\s\+$/
+
 " Show number column
 set number
 set numberwidth=4
