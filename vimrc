@@ -9,6 +9,20 @@ call pathogen#helptags()
 let $LANG='it' 
 set langmenu=it
 
+if &term =~ "xterm"
+  "256 color --
+  let &t_Co=256
+  " restore screen after quitting
+  set t_ti=ESC7ESC[rESC[?47h t_te=ESC[?47lESC8
+  if has("terminfo")
+    let &t_Sf="\ESC[3%p1%dm"
+    let &t_Sb="\ESC[4%p1%dm"
+  else
+    let &t_Sf="\ESC[3%dm"
+    let &t_Sb="\ESC[4%dm"
+  endif
+endif
+
 " color
 if has('gui_running')
     set background=light
@@ -48,7 +62,7 @@ syntax enable
 set syntax=on
 
 " Show space end of line
-highlight ExtraWhitespace ctermbg=grey
+highlight ExtraWhitespace ctermbg=052
 match ExtraWhitespace /\S\zs\s\+$/
 
 " Show number column
