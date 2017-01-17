@@ -63,7 +63,8 @@ set syntax=on
 
 " Show space end of line
 highlight ExtraWhitespace ctermbg=052
-match ExtraWhitespace /\S\zs\s\+$/
+"match ExtraWhitespace /\S\zs\s\+$/
+match ExtraWhitespace /\s\+$/
 
 " Show number column
 set number
