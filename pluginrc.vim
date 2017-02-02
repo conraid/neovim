@@ -55,8 +55,10 @@ autocmd FileType html,css,php EmmetInstall
 let g:user_emmet_leader_key='<C-X>'
 
 " Supertab
-let g:SuperTabDefaultCompletionType = "context"
-
+let g:SuperTabMappingForward = "<c-n>"
+let g:SuperTabMappingBackward = "<c-n>"
+"let g:SuperTabDefaultCompletionType = "<c-n>"
+"let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " NerdCommenter
 " Add your own custom formats or override the defaults
