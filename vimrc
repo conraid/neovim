@@ -147,6 +147,3 @@ highlight CursorLine cterm=NONE ctermbg=233
 highlight CursorLineNR ctermbg=233 ctermfg=255 
 set cursorline
 
-" Supertab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
