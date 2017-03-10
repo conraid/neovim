@@ -24,6 +24,7 @@ if &term =~ "xterm"
 endif
 
 " color
+set termguicolors
 if has('gui_running')
     set background=light
     colorscheme solarized
@@ -60,17 +61,18 @@ set undodir=/home/tmp/$USER
 set autoindent
 syntax enable
 set syntax=on
-
-" Show space end of line
-highlight ExtraWhitespace ctermbg=052
+  
+" Show space end of line  
+hi ExtraWhitespace ctermbg=darkred guibg=darkred
+":autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 "match ExtraWhitespace /\S\zs\s\+$/
 "match ExtraWhitespace /\s\+$/
-match ExtraWhitespace /\s\+\%#\@<!$/
+"match ExtraWhitespace /\s\+\%#\@<!$/
 
 " Show number column
 set number
 set numberwidth=4
-highlight LineNr term=none cterm=none ctermfg=7
+hi LineNr term=NONE cterm=NONE ctermfg=yellow
 
 " Show statusbar
 set laststatus=2
@@ -109,14 +111,8 @@ endif
 " set F2 toogle paste
 set pastetoggle=<F2>
 
-" set terminal 256 color. For blu and bold font
-"set t_Co=256
-
 " map f3 to toogle search highlightning
 nnoremap <F3> :set hlsearch!<CR>
-
-" Remove annoying underline in listing
-set nocursorline
 
 function! PhpSyntaxOverride()
   hi! def link phpDocTags  phpDefine
@@ -143,7 +139,9 @@ if has("autocmd")
 endif
 
 " Set cursorline (leave last)
-highlight CursorLine cterm=NONE ctermbg=233
-highlight CursorLineNR ctermbg=233 ctermfg=255 
 set cursorline
+hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=NONE
+hi CursorLineNr cterm=NONE ctermbg=darkgray ctermfg=NONE
+hi CursorLine gui=NONE guibg=#333333 guifg=NONE
+hi CursorLineNr gui=NONE guibg=#333333 guifg=orange
 
