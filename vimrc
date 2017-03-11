@@ -143,5 +143,7 @@ set cursorline
 hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=NONE
 hi CursorLineNr cterm=NONE ctermbg=darkgray ctermfg=NONE
 hi CursorLine gui=NONE guibg=#333333 guifg=NONE
-hi CursorLineNr gui=NONE guibg=#333333 guifg=orange
+hi CursorLineNr gui=NONE guibg=#333333 guifg=white
+
+hi Visual ctermbg=darkgray ctermfg=black guibg=darkgray guifg=black
 
