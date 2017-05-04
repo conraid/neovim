@@ -67,3 +67,6 @@
 [submodule "bundle/vim-better-whitespace"]
 	path = bundle/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "bundle/sslsecure"]
+	path = bundle/sslsecure
+	url = https://github.com/chr4/sslsecure.vim.git
