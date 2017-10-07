@@ -6,6 +6,8 @@ endif
 execute pathogen#infect()
 call pathogen#helptags()
 
+set mouse=a
+
 let $LANG='it' 
 set langmenu=it
 
