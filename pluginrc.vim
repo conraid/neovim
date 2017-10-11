@@ -63,3 +63,6 @@ let g:SuperTabMappingBackward = "<c-n>"
 " NerdCommenter
 " Add your own custom formats or override the defaults
 let g:NERDCustomDelimiters = { 'php': { 'left': '/** ','right': ' */' } }
+
+" Set F3 in visual mode
+vmap <F3> @:
