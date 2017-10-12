@@ -64,6 +64,8 @@ let g:SuperTabMappingBackward = "<c-n>"
 " Add your own custom formats or override the defaults
 let g:NERDCustomDelimiters = { 'php': { 'left': '/** ','right': ' */' } }
 
-" Set F3 in visual mode
+" Set F3 repeat in visual mode
 vmap <F3> @:
 
+" Set F8 Taglist
+nnoremap <silent> <F8> :TlistToggle<CR>
