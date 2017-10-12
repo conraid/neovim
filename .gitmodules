@@ -76,3 +76,15 @@
 [submodule "bundle/vis"]
 	path = bundle/vis
 	url = https://github.com/vim-scripts/vis
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "bundle/vim-easyclip"]
+	path = bundle/vim-easyclip
+	url = https://github.com/svermeulen/vim-easyclip
+[submodule "bundle/visualrepeat"]
+	path = bundle/visualrepeat
+	url = https://github.com/vim-scripts/visualrepeat

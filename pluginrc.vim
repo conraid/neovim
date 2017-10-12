@@ -66,3 +66,4 @@ let g:NERDCustomDelimiters = { 'php': { 'left': '/** ','right': ' */' } }
 
 " Set F3 in visual mode
 vmap <F3> @:
+
