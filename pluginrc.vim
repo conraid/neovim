@@ -26,7 +26,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_mode_map={'mode':'active', 'active_filetypes':[], 'passive_filetypes':['']}
+let g:syntastic_mode_map={'mode':'passive', 'active_filetypes':[], 'passive_filetypes':['']}
 let g:syntastic_phpcs_disable=0
 let g:syntastic_php_phpcs_args='--standard=WordPress'
 let g:syntastic_html_tidy_exec = 'tidy5'
@@ -43,7 +43,7 @@ let g:phpqa_messdetector_autorun = 0
 " Run codesniffer on save (default = 1)
 let g:phpqa_codesniffer_autorun = 0
 " Show code coverage on load (default = 0)
-let g:phpqa_codecoverage_autorun = 0
+let g:phpqa_codecoverage_autorun = 1
 " Ruleset phpmd
 let g:phpqa_messdetector_ruleset = "cleancode,codesize,naming,design,unusedcode"
 " Stop the location list opening automatically
