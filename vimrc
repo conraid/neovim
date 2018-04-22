@@ -136,3 +136,10 @@ hi CursorLineNr gui=NONE guibg=#333333 guifg=white
 
 hi Visual ctermbg=darkgray ctermfg=black guibg=darkgray guifg=black
 
+" Set bash to .info file in SlackBuild directory. Thanks to dugan
+autocmd BufEnter,BufNew *.info call CheckSlackBuildInfo()
+function CheckSlackBuildInfo()
+    if filereadable(expand('%:p:r'). '.SlackBuild')
+        setlocal filetype=sh
+    endif
+endfunction
