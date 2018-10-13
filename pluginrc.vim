@@ -69,3 +69,4 @@ vmap <F3> @:
 
 " Set F8 Taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
+
