@@ -19,9 +19,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-hybrid"]
 	path = bundle/vim-hybrid
 	url = https://github.com/w0ng/vim-hybrid.git
@@ -91,6 +88,3 @@
 [submodule "bundle/vim-php-cs-fixer"]
 	path = bundle/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer
-[submodule "LanguageClient"]
-	path = LanguageClient
-	url = https://github.com/autozimu/LanguageClient-neovim
