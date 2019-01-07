@@ -16,7 +16,6 @@ set termguicolors
 set guicursor=
 if has('gui_running')
     set background=light
-    colorscheme solarized
 else
     set background=dark
 "    colorscheme hybrid
@@ -90,6 +89,9 @@ set tabstop=4
 " Set filetype indent 
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
+
+" Set php indent in accord to phpcs
+autocmd FileType php setlocal noexpandtab
 
 " set paste autoindent 
 if has('nvim')
