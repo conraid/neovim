@@ -91,9 +91,9 @@
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = https://github.com/vim-vdebug/vdebug.git
-[submodule "bundle/webapi"]
-	path = bundle/webapi
-	url = https://github.com/mattn/webapi-vim
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim.git

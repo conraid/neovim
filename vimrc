@@ -16,11 +16,17 @@ set termguicolors
 set guicursor=
 if has('gui_running')
     set background=light
+    set cursorline
+    hi CursorLine guibg=#eeeeee guifg=NONE
+
 else
     set background=dark
-"    colorscheme hybrid
-"    "colorscheme desert
-"    "let g:colors_name="desert"
+    "let g:colors_name="desert"
+
+    set cursorline
+    hi CursorLine gui=NONE guibg=#111111 guifg=NONE 
+    hi CursorLineNr gui=NONE guibg=#111111 guifg=white
+    hi Visual guibg=darkgray guifg=black
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -128,15 +134,6 @@ if has("autocmd")
             \   exe "normal g`\"" |
             \ endif
 endif
-
-" Set cursorline (leave last)
-set cursorline
-hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=NONE
-hi CursorLineNr cterm=NONE ctermbg=darkgray ctermfg=NONE
-hi CursorLine gui=NONE guibg=#333333 guifg=NONE
-hi CursorLineNr gui=NONE guibg=#333333 guifg=white
-
-hi Visual ctermbg=darkgray ctermfg=black guibg=darkgray guifg=black
 
 " Set bash to .info file in SlackBuild directory. Thanks to dugan
 autocmd BufEnter,BufNew *.info call CheckSlackBuildInfo()
