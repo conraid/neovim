@@ -53,7 +53,7 @@ let g:phpqa_open_loc = 0
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 let g:user_emmet_leader_key='<C-x>'
-"let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/conf/emmet/snippets.json')), "\n"))
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/conf/emmet/snippets.json')), "\n"))
 
 " Supertab
 let g:SuperTabMappingForward = "<c-n>"
