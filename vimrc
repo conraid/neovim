@@ -142,3 +142,35 @@ function CheckSlackBuildInfo()
         setlocal filetype=sh
     endif
 endfunction
+
+
+" default color variables
+if !exists("g:color_line_bg_gui_default")
+  let g:color_line_bg_gui_default = '#111111'
+endif
+if !exists("g:color_line_bg_gui_red")
+  let g:color_line_bg_gui_red = '#431f1f'
+endif
+if !exists("g:color_line_bg_gui_green")
+  let g:color_line_bg_gui_green = '#284134'
+endif
+
+" function to set color based on insert mode(s)
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    exe 'hi CursorLine guibg='.g:color_line_bg_gui_green
+  elseif a:mode == 'r'
+    exe 'hi CursorLine guibg='.g:color_line_bg_gui_red
+  else
+    exe 'hi CursorLine guibg='.g:color_line_bg_gui_default
+  endif
+endfunction
+
+" function to set color back to default
+function! DefaultStatusLineColor()
+    exe 'hi CursorLine guibg='.g:color_line_bg_gui_default
+endfunction
+
+au InsertEnter * call InsertStatuslineColor(v:insertmode)
+au InsertChange * call InsertStatuslineColor(v:insertmode)
+au InsertLeave * call DefaultStatusLineColor()
