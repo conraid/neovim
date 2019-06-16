@@ -46,9 +46,6 @@ set backupdir=/home/tmp/$USER
 set directory=/home/tmp/$USER
 set undodir=/home/tmp/$USER
 
-" Font and color
-"set background=dark
-
 " Syntax
 set autoindent
 syntax enable
