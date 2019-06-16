@@ -1,5 +1,2 @@
-let g:netrw_dirhistmax  = 10
-let g:netrw_dirhist_cnt = 6
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_browse_split = 3
+let g:netrw_dirhistmax  =0
+let g:netrw_dirhist_cnt =0
