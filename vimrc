@@ -20,7 +20,6 @@ if has('gui_running')
     hi CursorLine guibg=#eeeeee guifg=NONE
 else
     set background=dark
-"    colorscheme hybrid
 "    "colorscheme desert
 "    "let g:colors_name="desert"
     hi CursorLine gui=NONE guibg=#111111 guifg=NONE 
