@@ -1,15 +1,15 @@
 " Set NerdTree
-" Visualizzo NERDTree con i tasti 'CTRL-N'  
+" Visualizzo NERDTree con i tasti 'CTRL-N'
 map <C-n> :NERDTreeToggle<CR>
-" Ignoro i file di backup di Vim  
-let NERDTreeIgnore=['\.swp$']  
-" Utilizzo <leader>p per mostrare e nascondere NERDTree  
+" Ignoro i file di backup di Vim
+let NERDTreeIgnore=['\.swp$']
+" Utilizzo <leader>p per mostrare e nascondere NERDTree
 silent! nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 let NERDTreeIgnore = ['\.pyc$']
 let g:NERDTreeWinSize=35
 "map <leader>nn :NERDTreeToggle<cr>
-"map <leader>nb :NERDTreeFromBookmark 
+"map <leader>nb :NERDTreeFromBookmark
 "map <leader>nf :NERDTreeFind<cr>
 
 " Set Airline

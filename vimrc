@@ -14,16 +14,15 @@ set langmenu=it
 " color
 set termguicolors
 set guicursor=
+set cursorline
 if has('gui_running')
     set background=light
-    set cursorline
     hi CursorLine guibg=#eeeeee guifg=NONE
-
 else
     set background=dark
-    "let g:colors_name="desert"
-
-    set cursorline
+"    colorscheme hybrid
+"    "colorscheme desert
+"    "let g:colors_name="desert"
     hi CursorLine gui=NONE guibg=#111111 guifg=NONE 
     hi CursorLineNr gui=NONE guibg=#111111 guifg=white
     hi Visual guibg=darkgray guifg=black
@@ -142,7 +141,6 @@ function CheckSlackBuildInfo()
         setlocal filetype=sh
     endif
 endfunction
-
 
 " default color variables
 if !exists("g:color_line_bg_gui_default")
