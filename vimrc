@@ -71,9 +71,9 @@ set statusline+=%F
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" Set nocompatible 
-set nocp 
- 
+" Set nocompatible
+set nocp
+
  "Always show current position
 set ruler
 
@@ -87,16 +87,16 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-" Set filetype indent 
+" Set filetype indent
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
 " Set php indent in accord to phpcs
 autocmd FileType php setlocal noexpandtab
 
-" set paste autoindent 
+" set paste autoindent
 if has('nvim')
-    set nopaste  
+    set nopaste
 else
     set paste
 endif
@@ -168,3 +168,12 @@ endfunction
 au InsertEnter * call InsertStatuslineColor(v:insertmode)
 au InsertChange * call InsertStatuslineColor(v:insertmode)
 au InsertLeave * call DefaultStatusLineColor()
+
+" x11 clipboard
+vnoremap <LeftRelease> "*ygv
+
+" Restore cursor after exiting
+au VimLeave * set guicursor=a:block-blinkon0
+
+" Set uptime
+set updatetime=100
