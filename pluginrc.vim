@@ -71,3 +71,8 @@ vmap <F3> @:
 " Set F8 Taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
 
+" NNN
+let g:nnn#layout = 'vnew' " or vnew, tabnew etc.
+" Or pass a dictionary with window size
+
+
