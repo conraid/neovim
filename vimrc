@@ -42,9 +42,11 @@ set wildmode=list:longest,full
 "set nowb
 "set noswapfile
 "set noundofile
+set undofile
 set backupdir=/home/tmp/$USER
 set directory=/home/tmp/$USER
 set undodir=/home/tmp/$USER
+"au BufWritePre /home/tmp* setlocal noundofile
 
 " Syntax
 set autoindent
