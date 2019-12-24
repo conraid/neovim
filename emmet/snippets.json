@@ -1,0 +1,10 @@
+{
+	"variables": {
+		"lang": "it",
+		"locale": "it-IT",
+		"charset": "UTF-8",
+		"indentation": "\t",
+		"newline": "\n"
+	}
+}
+
