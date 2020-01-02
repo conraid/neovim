@@ -1,6 +1,6 @@
-if filereadable(glob("~/.vim/pluginrc.vim"))
-	source ~/.vim/pluginrc.vim
-endif
+"if filereadable(glob("~/.vim/pluginrc.vim"))
+"	source ~/.vim/pluginrc.vim
+"endif
 
 " Load pathogen paths
 execute pathogen#infect()
