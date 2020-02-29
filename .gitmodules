@@ -103,3 +103,6 @@
 [submodule "bundle/nnn"]
 	path = bundle/nnn
 	url = https://github.com/mcchrish/nnn.vim
+[submodule "bundle/vim-gist"]
+	path = bundle/vim-gist
+	url = https://github.com/mattn/vim-gist
