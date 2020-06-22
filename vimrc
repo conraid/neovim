@@ -105,8 +105,16 @@ endif
 " set F2 toogle paste
 set pastetoggle=<F2>
 
-" map f3 to toogle search highlightning
-nnoremap <F3> :set hlsearch!<CR>
+augroup vimrc-incsearch-highlight
+  autocmd!
+  autocmd CmdlineEnter /,\? :set hlsearch
+  autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
+
+" Preview effects of command incrementally (e.g. :substitute). Neovim only.
+if has('nvim')
+    set inccommand=nosplit
+endif
 
 function! PhpSyntaxOverride()
   hi! def link phpDocTags  phpDefine
@@ -179,3 +187,6 @@ au VimLeave * set guicursor=a:block-blinkon0
 
 " Set uptime
 set updatetime=100
+
+highlight PmenuSel ctermbg=gray ctermfg=black guibg=gray guifg=black
+highlight Pmenu ctermbg=lightgray ctermfg=black guibg=lightgray guifg=black

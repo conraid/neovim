@@ -14,7 +14,7 @@ let g:NERDTreeWinSize=35
 
 " Set Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'luna'
+let g:airline_theme ='luna'
 
 " Set Syntastic
 set statusline+=%#warningmsg#
