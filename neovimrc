@@ -97,11 +97,7 @@ set omnifunc=syntaxcomplete#Complete
 autocmd FileType php setlocal noexpandtab
 
 " set paste autoindent
-if has('nvim')
-    set nopaste
-else
-    set paste
-endif
+set nopaste
 " set F2 toogle paste
 set pastetoggle=<F2>
 
@@ -112,9 +108,7 @@ augroup vimrc-incsearch-highlight
 augroup END
 
 " Preview effects of command incrementally (e.g. :substitute). Neovim only.
-if has('nvim')
-    set inccommand=nosplit
-endif
+set inccommand=nosplit
 
 function! PhpSyntaxOverride()
   hi! def link phpDocTags  phpDefine
