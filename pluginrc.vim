@@ -17,21 +17,21 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme ='luna'
 
 " Set Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 0
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
 
-let g:syntastic_mode_map={'mode':'passive', 'active_filetypes':[], 'passive_filetypes':['']}
-let g:syntastic_phpcs_disable=0
-let g:syntastic_php_phpcs_args='--standard=WordPress'
-let g:syntastic_html_tidy_exec = 'tidy5'
-noremap <F5> :SyntasticCheck<CR>
-noremap <F6> :SyntasticReset<CR>
+"let g:syntastic_mode_map={'mode':'passive', 'active_filetypes':[], 'passive_filetypes':['']}
+"let g:syntastic_phpcs_disable=0
+"let g:syntastic_php_phpcs_args='--standard=WordPress'
+"let g:syntastic_html_tidy_exec = 'tidy5'
+"noremap <F5> :SyntasticCheck<CR>
+"noremap <F6> :SyntasticReset<CR>
 
 " Set phpqa
 " Pass arguments to phpcs binary
