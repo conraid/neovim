@@ -1,7 +1,3 @@
-"if filereadable(glob("~/.vim/pluginrc.vim"))
-"	source ~/.vim/pluginrc.vim
-"endif
-
 " Load pathogen paths
 execute pathogen#infect()
 call pathogen#helptags()
@@ -184,3 +180,6 @@ set updatetime=100
 
 highlight PmenuSel ctermbg=gray ctermfg=black guibg=gray guifg=black
 highlight Pmenu ctermbg=lightgray ctermfg=black guibg=lightgray guifg=black
+
+" Impostazioni per il plugin ALE
+let g:ale_virtualtext_cursor=0
