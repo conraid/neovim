@@ -7,22 +7,6 @@ set mouse=a
 let $LANG='it'
 set langmenu=it
 
-" color
-set termguicolors
-set guicursor=
-set cursorline
-if has('gui_running')
-    set background=light
-    hi CursorLine guibg=#eeeeee guifg=NONE
-else
-    set background=dark
-"    "colorscheme desert
-"    "let g:colors_name="desert"
-    hi CursorLine gui=NONE guibg=#111111 guifg=NONE 
-    hi CursorLineNr gui=NONE guibg=#111111 guifg=white
-    hi Visual guibg=darkgray guifg=black
-endif
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -48,8 +32,9 @@ set undodir=/home/tmp/$USER
 set autoindent
 syntax enable
 set syntax=on
-  
-" Show space end of line  
+
+
+" Show space end of line
 hi ExtraWhitespace ctermbg=darkred guibg=darkred
 ":autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 "match ExtraWhitespace /\S\zs\s\+$/
@@ -183,3 +168,28 @@ highlight Pmenu ctermbg=lightgray ctermfg=black guibg=lightgray guifg=black
 
 " Impostazioni per il plugin ALE
 let g:ale_virtualtext_cursor=0
+
+" color
+"set termguicolors
+set guicursor=
+set cursorline
+if has('gui_running')
+    set background=light
+    hi CursorLine guibg=#eeeeee guifg=NONE
+else
+    set background=dark
+    "colorscheme desert
+    colorscheme darkblue
+    "colorscheme koehler
+    "colorscheme murphy
+    hi CursorLine gui=NONE guibg=#111111 guifg=NONE
+    hi CursorLineNr gui=NONE guibg=#111111 guifg=white
+    hi Visual guibg=darkgray guifg=black
+endif
+
+au TextYankPost * silent! lua vim.highlight.on_yank {timeout=550}
+
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none

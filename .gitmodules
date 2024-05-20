@@ -103,6 +103,9 @@
 [submodule "bundle/vim-gist"]
 	path = bundle/vim-gist
 	url = https://github.com/mattn/vim-gist
-[submodule "bundle/vim-highlightedyank"]
-	path = bundle/vim-highlightedyank
-	url = https://github.com/machakann/vim-highlightedyank
+[submodule "bundle/nvim-treesitter"]
+	path = bundle/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "bundle/tokyonight"]
+	path = bundle/tokyonight
+	url = https://github.com/folke/tokyonight.nvim
