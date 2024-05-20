@@ -1,21 +1,12 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "bundle/vim-hybrid"]
-	path = bundle/vim-hybrid
-	url = https://github.com/w0ng/vim-hybrid.git
 [submodule "bundle/html5.vim"]
 	path = bundle/html5.vim
 	url = https://github.com/othree/html5.vim.git
@@ -46,66 +37,19 @@
 [submodule "bundle/indentLine"]
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = https://github.com/jlanzarotta/bufexplorer.git
 [submodule "bundle/vim-better-whitespace"]
 	path = bundle/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
-[submodule "bundle/sslsecure"]
-	path = bundle/sslsecure
-	url = https://github.com/chr4/sslsecure.vim.git
-[submodule "bundle/vim-taglist"]
-	path = bundle/vim-taglist
-	url = https://github.com/vim-scripts/taglist.vim
-[submodule "bundle/vis"]
-	path = bundle/vis
-	url = https://github.com/vim-scripts/vis
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "bundle/vim-repeat"]
-	path = bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat
-[submodule "bundle/vim-easyclip"]
-	path = bundle/vim-easyclip
-	url = https://github.com/svermeulen/vim-easyclip
-[submodule "bundle/visualrepeat"]
-	path = bundle/visualrepeat
-	url = https://github.com/vim-scripts/visualrepeat
 [submodule "bundle/vim-php-cs-fixer"]
 	path = bundle/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer
-[submodule "bundle/webapi-vim"]
-	path = bundle/webapi-vim
-	url = https://github.com/mattn/webapi-vim.git
 [submodule "bundle/vim-editorconfig"]
 	path = bundle/vim-editorconfig
 	url = https://github.com/sgur/vim-editorconfig.git
-[submodule "bundle/vim-vinegar"]
-	path = bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/nerdtree-git-plugin"]
-	path = bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/ale"]
 	path = bundle/ale
-	url = https://github.com/dense-analysis/ale
-[submodule "bundle/nnn"]
-	path = bundle/nnn
-	url = https://github.com/mcchrish/nnn.vim
-[submodule "bundle/vim-gist"]
-	path = bundle/vim-gist
-	url = https://github.com/mattn/vim-gist
-[submodule "bundle/nvim-treesitter"]
-	path = bundle/nvim-treesitter
-	url = https://github.com/nvim-treesitter/nvim-treesitter
-[submodule "bundle/tokyonight"]
-	path = bundle/tokyonight
-	url = https://github.com/folke/tokyonight.nvim
+    url = https://github.com/dense-analysis/ale
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+

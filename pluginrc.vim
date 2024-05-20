@@ -1,20 +1,7 @@
-" Set NerdTree
-" Visualizzo NERDTree con i tasti 'CTRL-N'
-map <C-n> :NERDTreeToggle<CR>
-" Ignoro i file di backup di Vim
-let NERDTreeIgnore=['\.swp$']
-" Utilizzo <leader>p per mostrare e nascondere NERDTree
-silent! nmap <silent> <Leader>nt :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = "right"
-let NERDTreeIgnore = ['\.pyc$']
-let g:NERDTreeWinSize=35
-"map <leader>nn :NERDTreeToggle<cr>
-"map <leader>nb :NERDTreeFromBookmark
-"map <leader>nf :NERDTreeFind<cr>
-
 " Set Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme ='luna'
+"let g:airline_solarized_bg='dark'
 
 " Set Syntastic
 "set statusline+=%#warningmsg#
@@ -53,7 +40,6 @@ let g:phpqa_open_loc = 0
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,php EmmetInstall
 let g:user_emmet_leader_key='<C-x>'
-let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/emmet/snippets.json')), "\n"))
 
 " Supertab
 let g:SuperTabMappingForward = "<c-n>"
@@ -71,8 +57,5 @@ vmap <F3> @:
 " Set F8 Taglist
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-" NNN
-let g:nnn#layout = 'vnew' " or vnew, tabnew etc.
-" Or pass a dictionary with window size
-
-
+" Impostazioni per il plugin ALE
+let g:ale_virtualtext_cursor=0
