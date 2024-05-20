@@ -6,8 +6,6 @@ if filereadable(glob("~/.config/nvim/pluginrc.vim"))
 	source ~/.config/nvim/pluginrc.vim
 endif
 
-source ~/.config/nvim/blank.vim
-
 set mouse=a
 
 let $LANG='it'
