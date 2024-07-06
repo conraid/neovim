@@ -36,11 +36,6 @@ let g:phpqa_messdetector_ruleset = "cleancode,codesize,naming,design,unusedcode"
 " Stop the location list opening automatically
 let g:phpqa_open_loc = 0
 
-" Set EMMET
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,php EmmetInstall
-let g:user_emmet_leader_key='<C-x>'
-
 " Supertab
 let g:SuperTabMappingForward = "<c-n>"
 let g:SuperTabMappingBackward = "<c-n>"
@@ -59,3 +54,4 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 
 " Impostazioni per il plugin ALE
 let g:ale_virtualtext_cursor=0
+

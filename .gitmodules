@@ -25,9 +25,6 @@
 [submodule "bundle/vim-coloresque"]
 	path = bundle/vim-coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque.git
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -53,3 +50,6 @@
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
 
+[submodule "nvim-treesitter"]
+	path = nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
