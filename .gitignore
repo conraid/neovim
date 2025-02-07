@@ -1,2 +1,5 @@
 .netrwhist
 bundle/vim-autoprefixer/doc/tags
+*.bak
+*.backup
+*.old
