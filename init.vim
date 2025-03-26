@@ -82,8 +82,6 @@ autocmd FileType php setlocal noexpandtab
 
 " set paste autoindent
 set nopaste
-" set F2 toogle paste
-set pastetoggle=<F2>
 
 augroup vimrc-incsearch-highlight
   autocmd!
@@ -201,3 +199,4 @@ au TextYankPost * silent! lua vim.highlight.on_yank {timeout=550}
 " Set space instead tab in ChangeLog files
 autocmd BufRead,BufNewFile ChangeLog.* setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
+let g:loaded_syntax_sh = 1
