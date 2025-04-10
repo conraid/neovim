@@ -53,3 +53,6 @@
 [submodule "nvim-treesitter"]
 	path = nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "bundle/copilot"]
+	path = bundle/copilot
+	url = https://github.com/github/copilot.vim.git

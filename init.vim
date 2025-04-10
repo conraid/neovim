@@ -1,3 +1,5 @@
+source ~/.config/nvim/swapcheck.vim
+
 " Load pathogen paths
 execute pathogen#infect()
 call pathogen#helptags()
@@ -26,6 +28,7 @@ set wildmode=list:longest,full
 "set nowb
 "set noswapfile
 "set noundofile
+set swapfile
 set undofile
 set backupdir=/home/tmp/$USER
 set directory=/home/tmp/$USER
