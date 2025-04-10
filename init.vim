@@ -1,4 +1,4 @@
-source ~/.config/nvim/swapcheck.vim
+autocmd! nvim.swapfile
 
 " Load pathogen paths
 execute pathogen#infect()
