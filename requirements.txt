@@ -1,2 +1,13 @@
-neovim
-pynvim
+# Requisiti per utilizzare queta configurazione di Neovim
+
+# Neovim naturalmente
+neovim # https://neovim.io/
+       # Slackware package: https://slackers.it/repository/slackware64-current/neovim/
+
+# (Opzionale) Se vuoi usare plugin che richiedono pynvim
+pynvim # https://github.com/neovim/pynvim
+       # Slackware package: https://slackers.it/repository/slackware64-current/pynvim/
+
+# Plugin manager per Neovim
+packer  # https://github.com/wbthomason/packer.nvim
+
