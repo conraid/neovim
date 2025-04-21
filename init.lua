@@ -1,6 +1,6 @@
 -- ~/.config/nvim/init.lua
 
--- Prompt quando un file è già in fase di modifica
+-- Prompt quando un file è già in fase di modifica, come nella vecchia modalità di nvim.
 vim.cmd [[
   autocmd! nvim.swapfile
 ]]
