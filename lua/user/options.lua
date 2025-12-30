@@ -42,3 +42,8 @@ vim.opt.termguicolors = true
 vim.opt.guicursor = ''
 vim.opt.cursorline = true
 
+-- Copy in system clipboard
+vim.opt.clipboard:append("unnamedplus")
+vim.g.clipboard = false
+
+vim.opt.backupcopy = "yes"
