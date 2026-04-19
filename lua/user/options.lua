@@ -43,7 +43,17 @@ vim.opt.guicursor = ''
 vim.opt.cursorline = true
 
 -- Copy in system clipboard
-vim.opt.clipboard:append("unnamedplus")
-vim.g.clipboard = false
+-- vim.opt.clipboard:append("unnamedplus")
+-- vim.g.clipboard = false
 
 vim.opt.backupcopy = "yes"
+
+-- Configurazione Folding "Tutto Aperto"
+vim.opt.foldmethod = "expr"                     -- Usa Treesitter per il calcolo dei blocchi
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Il motore logico
+vim.opt.foldlevel = 99                          -- Apre tutti i livelli di default
+vim.opt.foldenable = true                       -- Abilita la possibilità di foldare
+vim.opt.foldcolumn = "1"
+
+-- Disabilitare il check DSR
+vim.g.neovim_check_dsr = 0

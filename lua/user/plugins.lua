@@ -1,29 +1,59 @@
 -- ~/.config/nvim/lua/user/plugins.lua
 
-local M = {}
+-- 0. Check if we are running as root
+local is_root = os.getenv("USER") == "root"
 
-function M.setup(packer_bootstrap)
-  require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use 'dense-analysis/ale'
-    use {'github/copilot.vim', cond = false}
-    use 'Yggdroot/indentLine'
-    use 'preservim/nerdcommenter'
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'ervandew/supertab'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
-    use 'ntpeters/vim-better-whitespace'
-    use 'chrisbra/Colorizer'
-    use 'editorconfig/editorconfig-vim'
-    use 'tpope/vim-surround'
-    use 'Exafunction/codeium.vim'
-
-    if packer_bootstrap then
-      require('packer').sync()
-    end
-  end)
+-- 1. Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-return M
+-- 2. Initialize lazy.nvim
+require("lazy").setup({
+  -- Essential
+  "wbthomason/packer.nvim",
 
+  -- Development Tools
+  "dense-analysis/ale",
+  { "github/copilot.vim", enabled = false },
+  "Yggdroot/indentLine",
+  "preservim/nerdcommenter",
+
+  -- Treesitter: Se root, non facciamo TSUpdate automatico per evitare ricompilazioni
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = is_root and nil or ":TSUpdate"
+  },
+
+  "ervandew/supertab",
+
+  -- UI / Appearance
+  "vim-airline/vim-airline",
+  "vim-airline/vim-airline-themes",
+  "ntpeters/vim-better-whitespace",
+  "chrisbra/Colorizer",
+
+  -- Editor Support
+  "editorconfig/editorconfig-vim",
+  "tpope/vim-surround",
+
+  -- Codeium: Disabilitato se l'utente è root
+  {
+    "Exafunction/codeium.vim",
+    enabled = not is_root
+  },
+
+}, {
+  ui = {
+    border = "rounded",
+  },
+})

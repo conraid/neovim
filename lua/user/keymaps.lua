@@ -12,3 +12,14 @@ vim.api.nvim_set_keymap('n', '<F8>', ':TlistToggle<CR>', { noremap = true, silen
 -- Clipboard (X11 selezione primaria)
 vim.api.nvim_set_keymap('v', '<LeftRelease>', '"*ygv', { noremap = true, silent = true })
 
+vim.keymap.set("n", "x", '"_x')
+vim.keymap.set("n", "d", '"_d')
+vim.keymap.set("v", "d", '"_d')
+
+-- Torna a inizio riga con FN+<- sulla tastiera mac
+vim.keymap.set('n', '<C-a>', '^', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-a>', '<C-o>^', { noremap = true, silent = true })
+
+-- Fine riga (Fn + → sulla tastiera del mac)
+vim.keymap.set('n', '<C-e>', '$')
+vim.keymap.set('i', '<C-e>', '<C-o>$')

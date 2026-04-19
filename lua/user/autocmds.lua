@@ -52,7 +52,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "ChangeLog.*",
-  command = "setlocal expandtab shiftwidth=2 softtabstop=0"
+  -- command = "setlocal expandtab shiftwidth=2 softtabstop=0"
+  command = "setlocal tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab"
 })
 
 -- Custom cursorline color on mode change
