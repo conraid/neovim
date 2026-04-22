@@ -11,9 +11,28 @@ vim.opt.wildmode = { 'list:longest', 'full' }
 -- Swap, backup, undo
 vim.opt.swapfile = true
 vim.opt.undofile = true
-vim.opt.backupdir = '/home/tmp/' .. vim.env.USER
-vim.opt.directory = '/home/tmp/' .. vim.env.USER
-vim.opt.undodir = '/home/tmp/' .. vim.env.USER
+
+if vim.fn.has('mac') == 1 then
+  -- Percorsi per Mac
+  local data_dir = vim.fn.stdpath('state')
+  vim.opt.backupdir = data_dir .. '/backup//'
+  vim.opt.directory = data_dir .. '/swp//'
+  vim.opt.undodir   = data_dir .. '/undo//'
+else
+  -- Percorsi per Linux
+  local linux_tmp = '/home/tmp/' .. vim.env.USER
+  vim.opt.backupdir = linux_tmp .. '/backup//'
+  vim.opt.directory = linux_tmp .. '/swp//'
+  vim.opt.undodir   = linux_tmp .. '/undo//'
+end
+
+-- Crea le directory se non esistono
+for _, dir in pairs({vim.opt.backupdir, vim.opt.directory, vim.opt.undodir}) do
+    local path = dir:get()[1]:gsub("//$", "")
+    if vim.fn.isdirectory(path) == 0 then
+        vim.fn.mkdir(path, 'p')
+    end
+end
 
 -- Indentazione e sintassi
 vim.opt.autoindent = true

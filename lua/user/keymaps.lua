@@ -1,25 +1,35 @@
 -- ~/.config/nvim/lua/user/keymaps.lua
 
--- Toggle spellcheck
-vim.api.nvim_set_keymap('n', '<F4>', ':setlocal spell! spelllang=it<CR>', { noremap = true, silent = true })
+local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- Toggle spellcheck (su Mac fn+F4)
+keymap('n', '<F4>', ':setlocal spell! spelllang=it<CR>', opts)
 
 -- Selezione visuale e macro
-vim.api.nvim_set_keymap('v', '<F3>', '@:', {})
+keymap('v', '<F3>', '@:', {})
 
 -- Taglist toggle
-vim.api.nvim_set_keymap('n', '<F8>', ':TlistToggle<CR>', { noremap = true, silent = true })
+keymap('n', '<F8>', ':TlistToggle<CR>', opts)
 
--- Clipboard (X11 selezione primaria)
-vim.api.nvim_set_keymap('v', '<LeftRelease>', '"*ygv', { noremap = true, silent = true })
+-- CLIPBOARD: Gestione differenziata
+if vim.fn.has('mac') == 1 then
+    -- Su Mac usiamo unnamedplus per sincronizzare tutto col Command+V
+    vim.opt.clipboard = "unnamedplus"
+else
+    -- Su Linux (X11) mantiengo la selezione al rilascio del mouse
+    keymap('v', '<LeftRelease>', '"*ygv', opts)
+end
 
-vim.keymap.set("n", "x", '"_x')
-vim.keymap.set("n", "d", '"_d')
-vim.keymap.set("v", "d", '"_d')
+-- PROTEZIONE: d e x non copiano nulla (registro nero)
+keymap("n", "x", '"_x')
+keymap("n", "d", '"_d')
+keymap("v", "d", '"_d')
 
--- Torna a inizio riga con FN+<- sulla tastiera mac
-vim.keymap.set('n', '<C-a>', '^', { noremap = true, silent = true })
-vim.keymap.set('i', '<C-a>', '<C-o>^', { noremap = true, silent = true })
+-- NAVIGAZIONE: Torna a inizio riga
+keymap('n', '<C-a>', '^', opts)
+keymap('i', '<C-a>', '<C-o>^', opts)
 
--- Fine riga (Fn + → sulla tastiera del mac)
-vim.keymap.set('n', '<C-e>', '$')
-vim.keymap.set('i', '<C-e>', '<C-o>$')
+-- Fine riga
+keymap('n', '<C-e>', '$', opts)
+keymap('i', '<C-e>', '<C-o>$', opts)
