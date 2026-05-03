@@ -5,21 +5,6 @@ vim.cmd [[
   autocmd! nvim.swapfile
 ]]
 
--- Bootstrap packer se non è installato
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1',
-      'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
-end
-
-local packer_bootstrap = ensure_packer()
-
 -- 1. Plugin Manager (Lazy.nvim)
 -- This must be first to register all plugins and commands
 require('user.plugins')
@@ -35,6 +20,7 @@ require('user.ale')
 require('user.airline')
 require('user.supertab')
 require('user.nerdcommenter')
+require('user.disabled_providers')
 
 -- 4. Core Neovim Settings
 -- Load global options, keymaps, and commands

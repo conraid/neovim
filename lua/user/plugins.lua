@@ -19,9 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- 2. Initialize lazy.nvim
 require("lazy").setup({
-  -- Essential
-  "wbthomason/packer.nvim",
-
   -- Development Tools
   "dense-analysis/ale",
   { "github/copilot.vim", enabled = false },
