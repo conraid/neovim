@@ -16,17 +16,19 @@ require('user.highlight')
 -- 3. Plugin Configurations
 -- Configure your tools while they are loaded but before buffers are initialized
 require('user.treesitter')
-require('user.ale')
 require('user.airline')
 require('user.supertab')
 require('user.nerdcommenter')
 require('user.disabled_providers')
+require("user.conform")
+require("user.lint")
 
 -- 4. Core Neovim Settings
 -- Load global options, keymaps, and commands
 require('user.options')
 require('user.keymaps')
 require('user.commands')
+require('user.filetypes')
 
 -- 5. Specific Workflows and Autocommands
 -- These often rely on everything above being already set up

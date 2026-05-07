@@ -6,8 +6,14 @@ neovim # https://neovim.io/
 
 # (Opzionale) Se vuoi usare plugin che richiedono pynvim
 pynvim # https://github.com/neovim/pynvim
-       # Slackware package: https://slackers.it/repository/slackware64-current/pynvim/
+       # Slackware package: https://slackers.it/repository/slackware64-current/python-pynvim/
 
 # Plugin manager per Neovim
 packer  # https://github.com/wbthomason/packer.nvim
 
+# Formattatori di codice
+shfmt # https://github.com/mvdan/sh
+      # Slackware package: https://slackers.it/repository/slackware64-current/shfmt/
+
+beautysh #https://github.com/lovesegfault/beautysh
+         # Slackware package: https://slackers.it/repository/slackware64-current/python-beautysh/

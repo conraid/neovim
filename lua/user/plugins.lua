@@ -20,7 +20,8 @@ vim.opt.rtp:prepend(lazypath)
 -- 2. Initialize lazy.nvim
 require("lazy").setup({
   -- Development Tools
-  "dense-analysis/ale",
+  { "stevearc/conform.nvim" },
+  { "mfussenegger/nvim-lint" },
   { "github/copilot.vim", enabled = false },
   "Yggdroot/indentLine",
   "preservim/nerdcommenter",
