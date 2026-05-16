@@ -27,10 +27,10 @@ require("lazy").setup({
   "preservim/nerdcommenter",
 
   -- Treesitter: Se root, non facciamo TSUpdate automatico per evitare ricompilazioni
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = is_root and nil or ":TSUpdate"
-  },
+--  {
+--    "nvim-treesitter/nvim-treesitter",
+--    build = is_root and nil or ":TSUpdate"
+--  },
 
   "ervandew/supertab",
 
@@ -43,6 +43,19 @@ require("lazy").setup({
   -- Editor Support
   "editorconfig/editorconfig-vim",
   "tpope/vim-surround",
+
+  -- Gestione Git con Neogit
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",         -- Utility Lua usate da tantissimi plugin
+      "sindrets/diffview.nvim",        -- Splendida visualizzazione dei diff dei file
+      "nvim-telescope/telescope.nvim", -- Per i menu di scelta rapida dei branch/commit
+    },
+    config = function()
+      require("user.neogit")
+    end,
+  },
 
   -- Codeium: Disabilitato se l'utente è root
   {
