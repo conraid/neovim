@@ -15,6 +15,9 @@ vim.cmd [[
   autocmd! nvim.swapfile
 ]]
 
+-- Disabilito Tree-Sitter
+require('user.antits')
+
 -- 1. Plugin Manager (Lazy.nvim)
 -- This must be first to register all plugins and commands
 require('user.plugins')
@@ -45,4 +48,3 @@ require('user.filetypes')
 -- These often rely on everything above being already set up
 require('user.autocmds')
 require('user.changelog')
-require('user.antishit')
