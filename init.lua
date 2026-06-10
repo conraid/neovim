@@ -10,6 +10,11 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Disable terminal querying to avoid SSH latency warnings
+vim.g.neovim_no_terminal_query = 1
+-- Explicitly set the background to skip automatic terminal DSR queries
+vim.o.background = "dark"
+
 -- Prompt quando un file è già in fase di modifica, come nella vecchia modalità di nvim.
 vim.cmd [[
   autocmd! nvim.swapfile

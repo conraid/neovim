@@ -76,3 +76,13 @@ vim.opt.foldcolumn = "1"
 
 -- Disabilitare il check DSR
 vim.g.neovim_check_dsr = 0
+
+vim.api.nvim_create_autocmd("BufEnter", { callback = function() vim.opt.formatoptions:remove({ "c", "r", "o" }) end })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+    end,
+})
+
