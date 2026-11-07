@@ -39,6 +39,7 @@ require("lazy").setup({
   "vim-airline/vim-airline-themes",
   "ntpeters/vim-better-whitespace",
   "chrisbra/Colorizer",
+  "nvim-tree/nvim-web-devicons",
 
   -- Editor Support
   "editorconfig/editorconfig-vim",
