@@ -22,7 +22,7 @@ require("lazy").setup({
   -- Development Tools
   { "stevearc/conform.nvim" },
   { "mfussenegger/nvim-lint" },
-  { "github/copilot.vim", enabled = false },
+  { "github/copilot.vim", enabled = not is_root },
   "Yggdroot/indentLine",
   "preservim/nerdcommenter",
 
@@ -55,12 +55,6 @@ require("lazy").setup({
     config = function()
       require("user.neogit")
     end,
-  },
-
-  -- Codeium: Disabilitato se l'utente è root
-  {
-    "Exafunction/codeium.vim",
-    enabled = not is_root
   },
 
 }, {
